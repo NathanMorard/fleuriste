@@ -2,11 +2,13 @@
   <div class="max-w-2xl mx-auto">
     <h1 class="text-3xl font-bold text-green-700 mb-6">Contactez-nous</h1>
 
-    <form @submit.prevent="handleSubmit" class="bg-white p-6 rounded-lg shadow space-y-4">
+    <form
+      @submit.prevent="handleSubmit"
+      class="bg-white p-6 rounded-lg shadow space-y-4"
+      id="contact"
+    >
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-          Email *
-        </label>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1"> Email * </label>
         <input
           type="email"
           id="email"
@@ -14,13 +16,11 @@
           required
           class="input"
           placeholder="votre@email.com"
-        >
+        />
       </div>
 
       <div>
-        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">
-          Sujet *
-        </label>
+        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1"> Sujet * </label>
         <input
           type="text"
           id="subject"
@@ -28,7 +28,7 @@
           required
           class="input"
           placeholder="Sujet de votre message"
-        >
+        />
       </div>
 
       <div>
@@ -45,9 +45,7 @@
         ></textarea>
       </div>
 
-      <button type="submit" class="btn w-full">
-        Envoyer le message
-      </button>
+      <button type="submit" class="btn w-full">Envoyer le message</button>
     </form>
   </div>
 </template>
@@ -61,16 +59,16 @@ const toast = useToast()
 const formData = ref({
   email: '',
   subject: '',
-  message: ''
+  message: '',
 })
 
 const handleSubmit = () => {
   // Ici, vous pourrez ajouter la logique d'envoi du formulaire
-  toast.success("Message envoyé avec succès !")
+  toast.success('Message envoyé avec succès !')
   formData.value = {
     email: '',
     subject: '',
-    message: ''
+    message: '',
   }
 }
 </script>

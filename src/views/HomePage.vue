@@ -6,7 +6,7 @@
     </section>
 
     <section class="bg-green-600 text-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-4xl font-bold mb-4">Bienvenue chez Nathan Fleuriste</h1>
+      <h1 class="text-4xl font-bold mb-4">Bienvenue chez Flower Power</h1>
       <p class="text-xl">Votre artisan fleuriste passionné</p>
     </section>
 

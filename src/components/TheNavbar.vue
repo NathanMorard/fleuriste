@@ -1,8 +1,8 @@
 <template>
   <nav class="bg-green-600 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
-      <router-link to="/" class="text-2xl font-bold">Nathan Fleuriste</router-link>
-      
+      <router-link to="/" class="text-2xl font-bold">Flower Power</router-link>
+
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-4">
         <router-link to="/" class="hover:text-green-200">Accueil</router-link>
@@ -12,29 +12,29 @@
       </div>
 
       <!-- Burger Menu Button -->
-      <button 
+      <button
         @click="isMenuOpen = !isMenuOpen"
         class="md:hidden p-2 focus:outline-none"
         aria-label="Menu"
       >
-        <svg 
-          class="w-6 h-6" 
-          fill="none" 
-          stroke="currentColor" 
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path 
+          <path
             v-if="!isMenuOpen"
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"
           />
-          <path 
+          <path
             v-else
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
             d="M6 18L18 6M6 6l12 12"
           />
         </svg>
@@ -42,13 +42,13 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div 
+    <div
       v-show="isMenuOpen"
       class="md:hidden absolute top-16 left-0 right-0 bg-green-600 shadow-lg z-50"
     >
       <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
-        <router-link 
-          v-for="link in links" 
+        <router-link
+          v-for="link in links"
           :key="link.path"
           :to="link.path"
           @click="isMenuOpen = false"
@@ -75,7 +75,6 @@ const links = [
   { name: 'Nous trouver', path: '/localisation' }
 ]
 
-// Close menu when route changes
 watch(
   () => route.path,
   () => {
